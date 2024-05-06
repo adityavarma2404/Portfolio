@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import grad from "../assets/grad.png";
 import expe from "../assets/experience.png";
 import achi from "../assets/achieve.png";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 function Education() {
   const eduRef = useRef();
@@ -18,12 +18,6 @@ function Education() {
 
   const layoutNegX = useTransform(scrollYProgress, [0.3, 0.95], [-350, 150]);
   const layoutPosX = useTransform(scrollYProgress, [0.3, 0.95], [350, -150]);
-
-  // useEffect(() => {
-  //   scrollYProgress.on("change", () => {
-  //     console.log("Edu me ->", scrollYProgress.get());
-  //   });
-  // }, [scrollYProgress]);
 
   return (
     <motion.div ref={eduRef} className="container container3">
@@ -124,31 +118,3 @@ function Education() {
 }
 
 export default Education;
-
-{
-  /* <motion.p
-  initial={{ marginRight: 30 }}
-  className="credentials_layout_box1"
-  >
-  In 2020 I graduated with my bachelors with 7.2 CGPA in computer
-  science and engineering at Mahatma Gandhi Institute of Technology,
-  Hyderabad. During my academics, I did a certification course in
-  Python from NPTEL and my Mini project was Hashtag analysis using
-  Python and my Major project was on Video steganography using
-  Python.
-  </motion.p>
-  <motion.p className="credentials_layout_box1">
-  Apart from my academics, I was an active member of the Dance club
-  of MGIT. Organised some of the events in college during the
-  cultural fest and participated in dance competitions in other
-  colleges as well.
-  </motion.p> */
-}
-
-// const { scrollY } = useScroll();
-// const title1Y = useTransform(scrollY, [1000, 1600], [-80, 0]);
-// const title2Y = useTransform(scrollY, [1000, 1600], [50, 0]);
-// const title2Scale = useTransform(scrollY, [1600, 1650], [1, 1.2]);
-// const titleOpacity = useTransform(scrollY, [1000, 1350], [0, 1]);
-// const layoutNegX = useTransform(scrollY, [1000, 2800], [-350, 150]);
-// const layoutPosX = useTransform(scrollY, [1000, 2800], [350, -150]);

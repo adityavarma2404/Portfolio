@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import foodApp from "../../assets/foodApp.png";
-import lookIn from '../../assets/LookIn_desktop.png'
+import lookIn from "../../assets/LookIn_desktop.png";
 
 function ProjectWindow({ windowOpacity, screenName, handleCloseBtn }) {
   const handleBtn = () => {
@@ -10,20 +10,17 @@ function ProjectWindow({ windowOpacity, screenName, handleCloseBtn }) {
   return (
     <motion.div
       initial={{
-        // width: "10px",
         width: "10%",
         height: "10px",
         opacity: 0,
       }}
       exit={{
-        // width: "100px",
         width: "10%",
         height: "10px",
         overflow: "hidden",
         opacity: 0,
       }}
       animate={{
-        // width: "570px",
         minWidth: "280px",
         width: "30%",
         height: "fit-content",
@@ -39,7 +36,10 @@ function ProjectWindow({ windowOpacity, screenName, handleCloseBtn }) {
         transition={{ delay: 0.2 }}
         className="project_window_img"
       >
-        <motion.img width="60%" src={screenName === "foodApp" ? foodApp: lookIn} />
+        <motion.img
+          width="60%"
+          src={screenName === "foodApp" ? foodApp : lookIn}
+        />
         {screenName === "foodApp" ? (
           <motion.p>
             Developed a browser-based food delivery application utilizing React
@@ -51,14 +51,19 @@ function ProjectWindow({ windowOpacity, screenName, handleCloseBtn }) {
           </motion.p>
         ) : (
           <motion.p>
-            Developed a OTT application utilizing React
-            JS<br />
-            <b>Tools: </b> React Router, Axios, Embla Carousel, driver.js<br />
+            Developed a OTT application utilizing React JS
+            <br />
+            <b>Tools: </b> React Router, Axios, Embla Carousel, driver.js
+            <br />
             Authentication has been implemented using Firebase.
           </motion.p>
         )}
         <motion.a
-          href={screenName === "foodApp" ?"https://food-app-7596d.web.app/": "https://looki-n.web.app/"}
+          href={
+            screenName === "foodApp"
+              ? "https://food-app-7596d.web.app/"
+              : "https://looki-n.web.app/"
+          }
           target="_blank"
           className="redirection_btn"
           whileHover={{
@@ -91,9 +96,9 @@ function ProjectWindow({ windowOpacity, screenName, handleCloseBtn }) {
       <motion.svg
         cursor="pointer"
         onClick={handleBtn}
-        initial={{opacity:0}}
-        animate={{opacity:1}}
-        transition={{delay:0.5}}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
         xmlns="http://www.w3.org/2000/svg"
         width="35"
         height="35"

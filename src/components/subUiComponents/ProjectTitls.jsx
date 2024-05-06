@@ -1,12 +1,11 @@
 import {
   motion,
   useScroll,
-  useAnimate,
   useTransform,
   AnimatePresence,
 } from "framer-motion";
 import laptop from "../../assets/laptop4-.png";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import folder from "../../assets/folder.png";
 import tablet from "../../assets/tablet.png";
 import ProjectWindow from "./ProjectWindow";
@@ -53,8 +52,8 @@ function ProjectTitls() {
 
   const titleScale = useTransform(
     titleScroll.scrollYProgress,
-    [0.43,0.94,0.95],
-    [1, 9,1]
+    [0.43, 0.94, 0.95],
+    [1, 9, 1]
   );
   const titleTop = useTransform(
     titleScroll.scrollYProgress,
@@ -82,12 +81,6 @@ function ProjectTitls() {
   const handleFoodBtn = () => setScreenName("foodApp");
 
   // useEffect(() => {
-  //   // titleScroll.scrollYProgress.on("change", () => {
-  //   //   console.log("Project ->", titleScroll.scrollYProgress.get());
-  //   // });
-  //   // folderScroll.scrollYProgress.on("change", () => {
-  //   //   console.log("Project ->", folderScroll.scrollYProgress.get());
-  //   // });
   //   // scrollYProgress.on("change", () => {
   //   //   console.log("Project ->", scrollYProgress.get());
   //   // });
@@ -113,8 +106,8 @@ function ProjectTitls() {
         className="projectBox1"
       >
         <motion.p
-          initial={{ top: "100px", scale: 1, opacity: 0}}
-          style={{ scale: titleScale, top: titleTop, opacity: titleOpacity}}
+          initial={{ top: "100px", scale: 1, opacity: 0 }}
+          style={{ scale: titleScale, top: titleTop, opacity: titleOpacity }}
           className="project_title"
         >
           PROJECTS
@@ -123,7 +116,7 @@ function ProjectTitls() {
       <motion.div
         ref={folderRef}
         initial={{ height: "100vh", width: "100%" }}
-        className="project_box folderBox"
+        className=" folderBox"
       >
         {screenName === "folder" && (
           <motion.div
@@ -143,7 +136,11 @@ function ProjectTitls() {
         )}
         <AnimatePresence>
           {(screenName === "OTT" || screenName === "foodApp") && (
-            <ProjectWindow windowOpacity={windowOpacity} screenName={screenName} handleCloseBtn={handleCloseBtn}/>
+            <ProjectWindow
+              windowOpacity={windowOpacity}
+              screenName={screenName}
+              handleCloseBtn={handleCloseBtn}
+            />
           )}
         </AnimatePresence>
       </motion.div>

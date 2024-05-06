@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 function NavBar({ scrollToSection }) {
@@ -145,15 +145,12 @@ function NavBar({ scrollToSection }) {
       </nav>
       <motion.div ref={navRef} className="hamburger_div">
         <motion.div
-          // initial="hidden"
-          // animate="visible"
-          // variants={navVariant}
           className="navBar_sideMenu"
         >
           {menus()}
         </motion.div>
       </motion.div>
-      <motion.div variants={tranVarients} initial="before" animate={isMounted ? "after": ""} ref={tranRef}   className="transition" >Hello</motion.div>
+      <motion.div variants={tranVarients} initial="before" animate={isMounted ? "after": ""} ref={tranRef}   className="transition" ></motion.div>
     </>
   );
 }

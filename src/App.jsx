@@ -22,7 +22,7 @@ function App() {
   };
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
+    setTimeout(() => {
       setIsLoader(false);
     }, 4000);
   }, []);
@@ -54,17 +54,6 @@ function App() {
       )}
     </>
   );
-  // return (
-  //   <>
-  //     <motion.div style={{ scaleX: scrollYProgress }} className="progressBar" />
-  //     <NavBar />
-  //     <Profile />
-  //     <AboutMe />
-  //     <Education />
-  //     <Skills />
-  //     <Projects />
-  //   </>
-  // );
 }
 
 export default App;

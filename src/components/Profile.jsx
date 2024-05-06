@@ -1,5 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
-import profile from "../assets/profile.png";
+import React, { useRef, useState } from "react";
 import sketch from "../assets/Final1.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import useMousePosition from "./subUiComponents/useMousePosition";
@@ -36,14 +35,7 @@ export default function Profile() {
     target: profileRef,
     offset: ["start start", "end start"],
   });
-  const { scrollY } = useScroll();
 
-  // const negDir = useTransform(scrollY, [0, 500], [0, -500]);
-  // const posDir = useTransform(scrollY, [0, 400], [0, 470]);
-  // const posDir = useTransform(scrollY, [0, 400], ["0px", "400px"]);
-  // const opacityX = useTransform(scrollY, [0, 200], [1, 0]);
-  // const scaleTitle = useTransform(scrollY, [0, 400], [1, 1.5]);
-  // const hideTitle = useTransform(scrollY, [700, 750], [1, 0]);
   const posDir = useTransform(scrollYProgress, [0, 0.5], ["0px", "350px"]);
   const opacityX = useTransform(scrollYProgress, [0, 0.25], [1, 0]);
   const scaleTitle = useTransform(scrollYProgress, [0, 0.5], [1, 1.3]);
@@ -70,12 +62,6 @@ export default function Profile() {
 
   const textEnter = () => setCursorVariant("text");
   const textLeave = () => setCursorVariant("default");
-
-  // useEffect(() => {
-  //   scrollYProgress.on("change", () => {
-  //     console.log("profile ->", scrollYProgress.get());
-  //   });
-  // }, [scrollYProgress]);
 
   return (
     <motion.div ref={profileRef} className="container profile_container">

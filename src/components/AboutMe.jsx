@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import man2 from "../assets/man2.png";
-import { useRef, useEffect } from "react";
+import { useRef} from "react";
 
 function AboutMe() {
   const currentTime = new Date();
@@ -50,15 +50,9 @@ function AboutMe() {
   );
   const aboutMeCllip1Vis = useTransform(scrollYProgress, [0.91, 0.915], [0, 1]);
 
-  // useEffect(() => {
-  //   scrollYProgress.on("change", () => {
-  //     console.log("About me ->", scrollYProgress.get());
-  //   });
-  // }, [scrollYProgress]);
-
   return (
     <motion.div ref={aboutRef} className="container abountMe_container2">
-      <div className="aboutMe_section section1">
+      <div className="section1">
         <motion.div
           initial={{
             scale: 0.2,
@@ -119,7 +113,7 @@ function AboutMe() {
           </motion.p>
         </motion.div>
       </div>
-      <div className="aboutMe_section section2">
+      <div className="section2">
         <motion.div
           initial={{ y: 500 }}
           style={{ y: aboutMeTitle }}
@@ -141,17 +135,3 @@ function AboutMe() {
 }
 
 export default AboutMe;
-
-// const { scrollY } = useScroll();
-// const aboutMeCircleX = useTransform(scrollY, [270, 600], [-620, 0]);
-// const aboutMeCircleY = useTransform(scrollY, [270, 600], [-450, 0]);
-// const aboutMeScale = useTransform(scrollY, [600, 700], [0.2, 1]);
-// const aboutMeBRadius = useTransform(scrollY, [650, 800], [400, 0]);
-// const aboutMeDesc = useTransform(scrollY, [800, 850], [0, 1]);
-// const aboutMeMargin = useTransform(scrollY, [800, 820], [10, 40]);
-// const aboutMeTitle = useTransform(scrollY, [550, 700], [500, 0]);
-// const aboutMeClip1Top = useTransform(scrollY,[820, 850], ["-100px", "10px"]);
-// const aboutMeClip1Left = useTransform(scrollY,[820, 850], ["100px", "-15px"]);
-// const aboutMeClip2Top = useTransform(scrollY,[820, 850], ["100px", "4px"]);
-// const aboutMeClip2Left = useTransform(scrollY,[820, 850], ["-100px", "-20px"]);
-// const aboutMeCllip1Vis = useTransform(scrollY,[820, 825], [0, 1]);
