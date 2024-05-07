@@ -116,7 +116,6 @@ function NavBar({ scrollToSection }) {
   };
 
   useEffect(()=>{
-    console.log("useeffect")
     const timeoutId = setTimeout(() => {
         setIsMounted(false)
     }, 1100);
