@@ -31,7 +31,7 @@ function SkillTitle() {
 
   return (
     <motion.div ref={sectionOneRef} className="skills_container">
-      <motion.h1
+      <motion.div
         className="skillsTitle"
         initial={{ borderRadius: "50%" }}
         style={{
@@ -41,8 +41,8 @@ function SkillTitle() {
           borderRadius: titleRadius,
         }}
       >
-        Skills
-      </motion.h1>
+        <h1>Skills</h1>
+      </motion.div>
       <motion.div style={{ opacity: skillsVisible }} className="skillsDesc">
         <motion.div
           initial={{ rotate: -40 }}
