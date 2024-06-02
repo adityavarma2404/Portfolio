@@ -367,9 +367,11 @@
     }
 
     .skillsTitle {
-        font-size: 6em;
         width: 350px;
         height: 350px;
+    }
+    .skillsTitle h1 {
+        font-size: 6em;
     }
 }
 
@@ -391,9 +393,11 @@
     }
 
     .skillsTitle {
-        font-size: 4em;
         width: 300px;
         height: 300px;
+    }
+    .skillsTitle h1 {
+        font-size: 4em;
     }
 
     .project_folder {

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import sketch from "../assets/Final1.png";
 import { motion, useScroll, useTransform } from "framer-motion";
-import useMousePosition from "./subUiComponents/useMousePosition";
+import useMousePosition from "../hooks/useMousePosition";
 
 export default function Profile() {
   const elements = [

@@ -1,4 +1,4 @@
-import ProjectTitls from "./subUiComponents/ProjectTitls";
+import ProjectTitls from './UI Components/ProjectTitls';
 
 function Projects() {
   return (

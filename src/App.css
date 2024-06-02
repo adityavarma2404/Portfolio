@@ -448,7 +448,7 @@ h1 {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -461,7 +461,8 @@ h1 {
   justify-content: center;
   align-items: center;
   color: white;
-  position: sticky;
+  position: absolute;
+  top: 10%;
 }
 
 .skillsTitle h1{

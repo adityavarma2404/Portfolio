@@ -22,7 +22,7 @@ function SkillTitle() {
 
   const titleScale = useTransform(scrollYProgress, [0.34, 0.7], [1, 5]);
 
-  const titleTop = useTransform(scrollYProgress, [0.34, 0.7], ["10%", "40%"]);
+  const titleTop = useTransform(scrollYProgress, [0.34, 0.7], ["10%", "45%"]);
   const titleHide = useTransform(scrollYProgress, [0.675, 0.7], [1, 0]);
   const titleRadius = useTransform(scrollYProgress, [0.5, 0.7], ["50%", "0%"]);
   const skillsVisible = useTransform(scrollYProgress, [0.7, 0.75], [0, 1]);
@@ -33,7 +33,7 @@ function SkillTitle() {
     <motion.div ref={sectionOneRef} className="skills_container">
       <motion.div
         className="skillsTitle"
-        initial={{ borderRadius: "50%" }}
+        initial={{ borderRadius: "50%"}}
         style={{
           scale: titleScale,
           top: titleTop,

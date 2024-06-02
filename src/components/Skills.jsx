@@ -1,5 +1,5 @@
 import { motion} from "framer-motion";
-import SkillTitle from "./subUiComponents/SkillTitle";
+import SkillTitle from "./UI Components/SkillTitle";
 
 function Skills() {
   return (
