@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import grad from "../assets/grad.png";
-import expe from "../assets/experience.png";
-import achi from "../assets/achieve.png";
+import grad from "../assets/images/grad.png";
+import expe from "../assets/images/experience.png";
+import achi from "../assets/images/achieve.png";
 import { useRef } from "react";
 
 function Education() {

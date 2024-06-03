@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import foodApp from "../../assets/foodApp.png";
-import lookIn from "../../assets/LookIn_desktop.png";
+import foodApp from "../../assets/images/foodApp.png";
+import lookIn from "../../assets/images/LookIn_desktop.png";
 
 function ProjectWindow({ windowOpacity, screenName, handleCloseBtn }) {
   const handleBtn = () => {

@@ -4,10 +4,10 @@ import {
   useTransform,
   AnimatePresence,
 } from "framer-motion";
-import laptop from "../../assets/laptop4-.png";
 import { useRef, useState } from "react";
-import folder from "../../assets/folder.png";
-import tablet from "../../assets/tablet.png";
+import laptop from "../../assets/images/laptop4-.png";
+import folder from "../../assets/images/folder.png";
+import tablet from "../../assets/images/tablet.png";
 import ProjectWindow from "./ProjectWindow";
 
 function ProjectTitls() {

@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import man2 from "../assets/man2.png";
+import man2 from "../assets/images/man2.png";
 import { useRef} from "react";
 
 function AboutMe() {

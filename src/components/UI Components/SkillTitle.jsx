@@ -1,17 +1,17 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import bootstrap from "../../assets/bootstrap.png";
-import css from "../../assets/css.png";
-import fmotion from "../../assets/framerMotion.png";
-import git from "../../assets/GitHub.png";
-import RTL from "../../assets/RTL_.png";
-import jest from "../../assets/jest.png";
-import js from "../../assets/js.png";
-import reactJs from "../../assets/ReactJs.png";
-import router from "../../assets/react-router-.png";
-import redux from "../../assets/redux.png";
-import typescript from "../../assets/Typescript.png";
-import html from "../../assets/html.png";
+import bootstrap from "../../assets/images/bootstrap.png";
+import css from "../../assets/images/css.png";
+import fmotion from "../../assets/images/framerMotion.png";
+import git from "../../assets/images/GitHub.png";
+import RTL from "../../assets/images/RTL_.png";
+import jest from "../../assets/images/jest.png";
+import js from "../../assets/images/js.png";
+import reactJs from "../../assets/images/ReactJs.png";
+import router from "../../assets/images/react-router-.png";
+import redux from "../../assets/images/redux.png";
+import typescript from "../../assets/images/Typescript.png";
+import html from "../../assets/images/html.png";
 
 function SkillTitle() {
   const sectionOneRef = useRef(null);
