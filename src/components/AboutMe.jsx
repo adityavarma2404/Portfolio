@@ -1,6 +1,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef, useEffect } from "react";
+
+import "../styles/aboutme.css";
 import man2 from "../assets/images/man2.png";
-import { useRef} from "react";
 
 function AboutMe() {
   const currentTime = new Date();
@@ -19,9 +21,9 @@ function AboutMe() {
     greeting = "Good Evening!";
   }
 
-  const aboutMeCircleX = useTransform(scrollYProgress, [0.3, 0.8], [-700, 0]);
-  const aboutMeCircleY = useTransform(scrollYProgress, [0.3, 0.8], [-800, 0]);
-  const aboutMeScale = useTransform(scrollYProgress, [0.8, 0.9], [0.2, 1]);
+  const aboutMeCircleX = useTransform(scrollYProgress, [0.21, 0.8], [-600, 0]);
+  const aboutMeCircleY = useTransform(scrollYProgress, [0.21, 0.8], [-1200, 0]);
+  const aboutMeScale = useTransform(scrollYProgress, [0.6, 0.9], [0.2, 1]);
   const aboutMeBRadius = useTransform(scrollYProgress, [0.88, 0.9], [400, 0]);
   const aboutMeTitle = useTransform(scrollYProgress, [0.4, 0.7], [500, 0]);
   const aboutMeDesc = useTransform(scrollYProgress, [0.885, 0.89], [0, 1]);
@@ -49,6 +51,13 @@ function AboutMe() {
     ["-100px", "-20px"]
   );
   const aboutMeCllip1Vis = useTransform(scrollYProgress, [0.91, 0.915], [0, 1]);
+
+  useEffect(() => {
+    const unsubscribe = scrollYProgress.onChange((value) => {
+      console.log("Scroll Progress:", value);
+    });
+    return () => unsubscribe();
+  }, [scrollYProgress]);
 
   return (
     <motion.div ref={aboutRef} className="container abountMe_container2">
@@ -96,7 +105,6 @@ function AboutMe() {
             initial={{ opacity: 0 }}
             style={{ opacity: aboutMeDesc }}
             className="description"
-            
           >
             Hello there, I'm Aditya. I discovered my interest in creating
             interactive websites in 2020, and that's how my journey began.{" "}
@@ -105,7 +113,13 @@ function AboutMe() {
             enhance my proficiency. Later, I delved into the React ecosystem,
             exploring various tools for state management, navigation, forms,
             animations, styling, etc., which streamline development processes,
-            optimize performance, ensure responsiveness, and much more. <br />
+            optimize performance, ensure responsiveness, and much more.
+            <br />
+            <br />I also worked on backend technologies like Node.js, Express,
+            and MongoDB, where I created RESTful APIs, handled authentication
+            and authorization, and contributed to building secure and scalable
+            applications.
+            <br />
             <br /> I thrive in challenging environments and enjoy collaborating
             with interactive teams to further my career with the latest
             technologies. I am eager to contribute my experience and skills to

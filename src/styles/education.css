@@ -1,0 +1,226 @@
+.container3 {
+    flex-direction: column;
+    height: 150vh;
+    justify-content: flex-end;
+}
+
+.credentials_title_container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.credentials_title_container h1 {
+    color: white;
+}
+
+.credentials_title_box {
+    height: 50px;
+    width: 300px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.credentials_container {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.credentials_container div:first-child,
+.credentials_container div:nth-child(3) {
+    align-self: flex-start;
+}
+
+.credentials_container div:nth-child(2) {
+    align-self: flex-end;
+}
+
+.credentials_container div:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.credentials_layout {
+    background-color: rgb(255, 214, 127);
+    width: 90%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.credentials_layout_div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.credentials_layout_div img {
+    margin-right: 40px;
+    width: 100px;
+    z-index: -1;
+}
+
+.middleDiv img {
+    width: 100px;
+    margin-left: 40px;
+}
+
+.lastImg {
+    width: 50px;
+}
+
+.skills_summery {
+    position: relative;
+    background-color: rgb(255, 245, 191, 0.5);
+    width: 30%;
+    color: black;
+    padding: 20px;
+    font-weight: 600;
+}
+
+.skills_summery:hover .summery_box {
+    opacity: 1;
+    scale: 1;
+    transition-duration: 0.3s;
+}
+
+.summery_box {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: black;
+    opacity: 0;
+    scale: 0;
+    transition-delay: 0.5s;
+    box-shadow: 0px 0px 10px black;
+    font-weight: 500;
+}
+
+.skills_summery .box2 {
+    rotate: 5deg;
+    width: 16em;
+    top: -6em;
+    right: -12em;
+    z-index: 0;
+}
+
+.skills_summery .box1 {
+    width: 16em;
+    top: -7.5em;
+    right: -10em;
+    z-index: 2;
+}
+
+.skills_summery .box3 {
+    width: 18em;
+    height: 20em;
+    top: -9em;
+    left: -15em;
+    z-index: 2;
+}
+
+.skills_summery .box4 {
+    rotate: 5deg;
+    width: 17em;
+    height: 17em;
+    top: -7.5em;
+    left: -12em;
+    z-index: 0;
+}
+
+@media screen and (max-width: 1100px) {
+    .skills_summery:hover .summery_box {
+        scale: 0.8;
+    }
+
+    .skills_summery .box2 {
+        right: 0em;
+        left: -15em;
+    }
+
+    .skills_summery .box1 {
+        right: 0em;
+        left: -12em;
+    }
+
+    .skills_summery .box3 {
+        left: 20em;
+    }
+
+    .skills_summery .box4 {
+        left: 20em;
+    }
+
+    .credentials_layout {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .credentials_layout {
+        width: 100%;
+    }
+
+    .credentials_layout_div {
+        justify-content: flex-start;
+    }
+
+    .middleDiv {
+        justify-content: flex-end;
+    }
+
+    .credentials_layout_div img {
+        scale: 0.9;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .skills_summery {
+        width: 60%;
+        height: 60%;
+    }
+
+    .credentials_layout_div img {
+        position: absolute;
+        opacity: 0.4;
+    }
+
+    .description,
+    .skills_summery {
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .preLoaderText {
+        font-size: 3em;
+    }
+
+    .summery_box {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) and (max-height: 800px) {
+    .credentials_layout_div {
+        margin-left: -90px;
+    }
+
+    .middleDiv {
+        margin-left: 0px;
+        margin-right: -90px;
+    }
+
+    .skills_summery {
+        font-size: 15px;
+    }
+}

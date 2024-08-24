@@ -1,8 +1,10 @@
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+
+import "../styles/education.css";
 import grad from "../assets/images/grad.png";
 import expe from "../assets/images/experience.png";
 import achi from "../assets/images/achieve.png";
-import { useRef } from "react";
 
 function Education() {
   const eduRef = useRef();
@@ -74,25 +76,26 @@ function Education() {
             className="credentials_layout_div middleDiv"
           >
             <motion.p className="skills_summery">
-              I have a 3 years of working experience as a Front End developer in
-              TCS.
+              I have a 3+ years of working experience as a MERN stack developer
+              in TCS.
               <motion.span className="summery_box box3">
                 I started my career in TCS as a front-end developer in the
                 retail sector from March 2021 to March 2023. During this period,
-                I developed the React application using TypeScript, prioritizing
-                client requirements and ensuring customer satisfaction. I gained
-                skills in communication, interaction, and collaboration with
-                multiple teams.
+                I developed the React application using TypeScript and backend
+                with Node.js and PostgreSQL, prioritizing client requirements
+                and ensuring customer satisfaction. I gained skills in
+                communication, interaction, and collaboration with multiple
+                teams.
               </motion.span>
               <motion.span
                 whileHover={{ zIndex: 3 }}
                 className="summery_box box4"
               >
-                Later, I started working in the banking sector from March 2023
-                to April 2024. During the development, we were limited to using
-                React tools due to security concerns in the banking field. It
-                was a great experience to work alongside experienced individuals
-                in an Agile environment.
+                Later, I started working in the banking sector from March 2023.
+                During the development, we were limited to using React tools due
+                to security concerns in the banking field. It was a great
+                experience to work alongside experienced individuals in an Agile
+                environment.
               </motion.span>
             </motion.p>
 

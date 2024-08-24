@@ -1,8 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import bootstrap from "../../assets/images/bootstrap.png";
 import css from "../../assets/images/css.png";
-import fmotion from "../../assets/images/framerMotion.png";
 import git from "../../assets/images/GitHub.png";
 import RTL from "../../assets/images/RTL_.png";
 import jest from "../../assets/images/jest.png";
@@ -12,6 +11,9 @@ import router from "../../assets/images/react-router-.png";
 import redux from "../../assets/images/redux.png";
 import typescript from "../../assets/images/Typescript.png";
 import html from "../../assets/images/html.png";
+import node from "../../assets/images/nodejs.webp";
+import express from "../../assets/images/express_logo.webp";
+import mongo from "../../assets/images/mongo.webp";
 
 function SkillTitle() {
   const sectionOneRef = useRef(null);
@@ -20,20 +22,19 @@ function SkillTitle() {
     offset: ["start end", "end end"],
   });
 
-  const titleScale = useTransform(scrollYProgress, [0.34, 0.7], [1, 5]);
-
-  const titleTop = useTransform(scrollYProgress, [0.34, 0.7], ["10%", "45%"]);
-  const titleHide = useTransform(scrollYProgress, [0.675, 0.7], [1, 0]);
-  const titleRadius = useTransform(scrollYProgress, [0.5, 0.7], ["50%", "0%"]);
-  const skillsVisible = useTransform(scrollYProgress, [0.7, 0.75], [0, 1]);
-  const skillsRotateNeg = useTransform(scrollYProgress, [0.75, 0.9], [-40, 0]);
-  const skillsRotatePos = useTransform(scrollYProgress, [0.75, 0.9], [60, 0]);
+  const titleScale = useTransform(scrollYProgress, [0.233, 0.53], [1, 5]);
+  const titleTop = useTransform(scrollYProgress, [0.3, 0.53], ["10%", "30%"]);
+  const titleHide = useTransform(scrollYProgress, [0.5, 0.53], [1, 0]);
+  const titleRadius = useTransform(scrollYProgress, [0.5, 0.53], ["50%", "0%"]);
+  const skillsVisible = useTransform(scrollYProgress, [0.533, 0.55], [0, 1]);
+  const skillsRotateNeg = useTransform(scrollYProgress, [0.533, 0.7], [-40, 0]);
+  const skillsRotatePos = useTransform(scrollYProgress, [0.533, 0.7], [60, 0]);
 
   return (
     <motion.div ref={sectionOneRef} className="skills_container">
       <motion.div
         className="skillsTitle"
-        initial={{ borderRadius: "50%"}}
+        initial={{ borderRadius: "50%" }}
         style={{
           scale: titleScale,
           top: titleTop,
@@ -58,7 +59,7 @@ function SkillTitle() {
             <motion.img src={reactJs} className="skills_img reactImg" />
             <motion.img src={typescript} className="skills_img tsImg" />
             <motion.img src={bootstrap} className="skills_img bootImg" />
-            <motion.img src={fmotion} className="skills_img fmImg" />
+            <motion.img src={redux} className="skills_img fmImg" />
             <motion.img src={router} className="skills_img routImg" />
           </motion.div>
         </motion.div>
@@ -69,8 +70,10 @@ function SkillTitle() {
           className="skills_ stateMan"
         >
           <motion.div className="skills_outline">
-            <h1>State Management</h1>
-            <motion.img src={redux} className="skills_img reduxImg" />
+            <h1>Back End</h1>
+            <motion.img src={node} className="skills_img nodeImg" />
+            <motion.img src={express} className="skills_img expressImg" />
+            <motion.img src={mongo} className="skills_img mongoImg" />
           </motion.div>
         </motion.div>
         <motion.div

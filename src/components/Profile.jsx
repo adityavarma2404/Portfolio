@@ -1,7 +1,9 @@
 import React, { useRef, useState } from "react";
 import sketch from "../assets/images/Final1.png";
 import { motion, useScroll, useTransform } from "framer-motion";
+
 import useMousePosition from "../hooks/useMousePosition";
+import "../styles/profile.css";
 
 export default function Profile() {
   const elements = [
@@ -86,7 +88,7 @@ export default function Profile() {
             style={{ y: posDir, scale: scaleTitle, opacity: hideTitle }}
             className="profile_card_title1"
           >
-            Front-End React <br className="titleBreak" /> Developer
+            MERN Stack <br className="titleBreak" /> Developer
           </motion.h1>
           <motion.h1
             initial={{ x: -30, opacity: 0 }}

@@ -1,0 +1,309 @@
+.container4 {
+    height: auto;
+}
+
+.skills_container {
+    width: 100%;
+    height: 400vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.skillsTitle {
+    width: 500px;
+    height: 500px;
+    background-color: #ff7c7c;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    top: 10%;
+}
+
+.skillsTitle h1 {
+    font-size: 8em;
+}
+
+.skillsDesc {
+    height: 150vh;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.skills_ {
+    position: absolute;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+.skills_:hover {
+    border: 3px solid transparent;
+}
+
+.skills_ h1 {
+    transition-duration: 0.5s;
+}
+
+.skills_:hover h1 {
+    scale: 150%;
+}
+
+.skills_:hover #frontEndTitle {
+    scale: 200%;
+}
+
+.frontEnd {
+    width: 350px;
+    height: 350px;
+    top: -40%;
+    right: 20%;
+}
+
+
+.skills_outline {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills_outline h1 {
+    text-shadow: 3px 5px 5px black;
+    color: white;
+}
+
+.skills_img {
+    position: absolute;
+    width: 60px;
+}
+
+.htmlImg {
+    top: -12%;
+    left: 0;
+}
+
+.cssImg {
+    top: 10%;
+    left: -20%;
+}
+
+.jsImg {
+    top: 45%;
+    left: -25%;
+}
+
+.reactImg {
+    bottom: 5%;
+    left: -18%;
+}
+
+.tsImg {
+    bottom: -15%;
+    left: 4%;
+}
+
+.bootImg {
+    top: -20%;
+    left: 25%;
+}
+
+.fmImg {
+    bottom: -26%;
+    left: 30%;
+    width: 70px;
+}
+
+.routImg {
+    bottom: -16%;
+    left: 67%;
+    width: 120px;
+}
+
+.stateMan {
+    width: 200px;
+    height: 200px;
+    top: -10%;
+    left: 10%;
+}
+
+.reduxImg {
+    top: -15%;
+    right: -40%;
+    filter: drop-shadow(5px 5px 1px black);
+}
+
+.testing {
+    width: 250px;
+    height: 250px;
+    bottom: 45%;
+    left: 25%;
+}
+
+.jestImg {
+    top: 45%;
+    left: -35%;
+    filter: drop-shadow(5px 5px 1px black);
+}
+
+.RTLImg {
+    bottom: -10%;
+    left: -30%;
+    filter: drop-shadow(5px 5px 1px black);
+}
+
+.versionCon {
+    width: 200px;
+    height: 200px;
+    bottom: 20%;
+    right: 35%;
+}
+
+.nodeImg {
+    top: -30%;
+    right: -30%;
+    width: 120px;
+}
+
+.expressImg {
+    top: 10%;
+    right: -50%;
+    width: 80px;
+}
+
+.mongoImg {
+    bottom: -15%;
+    right: -40%;
+    width: 80px;
+}
+
+.gitImg {
+    right: -55%;
+}
+
+@media screen and (max-width: 1300px) {
+    .frontEnd {
+        width: 300px;
+        height: 300px;
+        right: 15%;
+    }
+
+    .htmlImg {
+        top: -15%;
+        left: -3%;
+    }
+
+    .testing {
+        width: 200px;
+        height: 200px;
+    }
+
+    .jestImg {
+        top: 45%;
+        left: -45%;
+    }
+
+    .RTLImg {
+        bottom: -25%;
+    }
+
+    .versionCon {
+        bottom: 5%;
+        right: 30%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .frontEnd,
+    .stateMan,
+    .testing,
+    .versionCon {
+        scale: 0.9;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .skills_summery {
+        width: 35%;
+    }
+
+    .frontEnd {
+        top: 20%;
+        right: 10%;
+    }
+
+    .stateMan {
+        top: 30%;
+        left: 6%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .skills_summery .box2 {
+        right: 0em;
+        left: -10em;
+    }
+
+    .skills_summery .box1 {
+        right: 0em;
+        left: -8em;
+    }
+
+    .skills_summery .box3,
+    .skills_summery .box4 {
+        left: 16em;
+    }
+
+    .frontEnd,
+    .stateMan,
+    .testing,
+    .versionCon {
+        scale: 0.7;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .frontEnd {
+        top: 20%;
+        right: 5%;
+    }
+
+    .stateMan {
+        top: 45%;
+        left: 0%;
+    }
+}
+
+@media screen and (max-width: 400px) and (max-height: 800px) {
+    .skillsTitle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .skillsTitle h1 {
+        font-size: 4em;
+    }
+
+    .frontEnd {
+        top: 5%;
+    }
+
+    .testing {
+        left: 50%;
+    }
+
+    .stateMan,
+    .testing,
+    .versionCon {
+        scale: 0.6;
+    }
+}
